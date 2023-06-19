@@ -20,6 +20,6 @@ int main(){
     int n;
     cout << "Enter the number of stairs -- ";
     cin >> n;
-    cout << climbstairs(n);
+    cout << "The number of ways stairs can be climbed are -- " << climbstairs(n);
     return 0;
 }
