@@ -41,6 +41,37 @@ void OpBubbleSort(int arr[])
 //         }
 //     }
 // }
+// void Subseqsum(int i, int* arr, int n,vector<int> &ans, int target)
+// {
+//     if(i==n)
+//     {
+//         int sum =0;
+//         for(auto it : ans){
+//         sum =sum+it;
+//         }
+//         if(sum==target)
+//         {
+//             for(auto it: ans)
+//             {
+//                 cout<< it <<" ";
+//             }
+//             cout<<endl;
+//         }
+//         return;
+//     }
+//     // if(ans.size()==0)
+//     // {
+//     //     cout<<"{}";
+//     // }
+//     // cout <<endl;
+    
+//     Subseq(i+1,arr,n,ans,target);
+//     ans.push_back(arr[i]);
+//     Subseq(i+1,arr,n,ans,target);
+//     ans.pop_back();
+    
+    
+// }
 
 int main()
 {
