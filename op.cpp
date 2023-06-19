@@ -72,6 +72,24 @@ void OpBubbleSort(int arr[])
     
     
 // }
+// void func(int i,int *arr, int n)
+// {
+//     if(i>=n/2)
+//     return;
+//     swap(arr[i],arr[n-i-1]);
+//     cout<<"swapping..."<<arr[i]<<" and "<<arr[n-i-1] <<endl;
+//     func(i+1,arr,n);
+// }
+
+// bool IsPalindrome(int i,int *arr, int n)
+// {
+//     if(i>=n/2)
+//     return true;
+//     if(arr[i]!=arr[n-i-1])
+//     return false;
+//     cout<<"checking ..."<<arr[i]<<" and "<<arr[n-i-1] <<endl;
+//     return IsPalindrome(i+1,arr,n);
+// }
 
 int main()
 {
