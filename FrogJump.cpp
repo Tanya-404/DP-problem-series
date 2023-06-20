@@ -19,8 +19,8 @@ int frogJump(int n, int *heights)
 }
 
 int main(){
-    // int heights[]={10 ,20, 30, 10};
     int heights[]={7, 4 ,4, 2, 6, 6 ,3, 4 };
-    cout << frogJump(8,heights);
+    int n=8;
+    cout << frogJump(n,heights);
     return 0;
 }
