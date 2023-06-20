@@ -22,7 +22,7 @@ int minCoins(int *coins, int M, int V)
 	} 
 
 int main(){
-    int V = 30, M = 3, coins[] = {25, 10, 5};
+    int V =30 , M = 3, coins[] = {25, 10, 5};
     cout << minCoins(coins , M, V);
     return 0;
 }
