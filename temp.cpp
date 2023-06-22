@@ -127,7 +127,8 @@ int main(){
     // int sum=2;
     
     // cout<< Subseqsum(0,arr,n,0,sum);
-    string  s = "axc", t = "ahbgdc";
+    // string  s = "axc", t = "ahbgdc";
+  
     string ans ="";
     int n =t.length();
     cout<< Subseq(0,t,n,ans,s);

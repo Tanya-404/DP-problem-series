@@ -2,15 +2,15 @@
 using namespace std;
 #include<vector>
 #include <bits/stdc++.h> 
-void print(vector<vector<int>> &vtr )
-{
-    for ( int i = 0 ; i < vtr.size(); i++ )
-    {
-    for ( int j = 0; j < vtr[i].size() ; j++ )
-    cout << vtr[i][j] << " " ;
-    cout << endl ;
-    }
-}
+// void print(vector<vector<int>> &vtr )
+// {
+//     for ( int i = 0 ; i < vtr.size(); i++ )
+//     {
+//     for ( int j = 0; j < vtr[i].size() ; j++ )
+//     cout << vtr[i][j] << " " ;
+//     cout << endl ;
+//     }
+// }
 int NinjaTrainTabOpt(int n, vector<vector<int>> &points)
 {
     vector<int> prev(4,0);
@@ -24,7 +24,6 @@ int NinjaTrainTabOpt(int n, vector<vector<int>> &points)
         for(int last=0; last<4;last++)
         {
             temp[last] = 0;
-            // int maxi =0;
             for(int task =0; task<3; task++)
             {
                 if(task!=last)

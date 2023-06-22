@@ -5,13 +5,11 @@ using namespace std;
 
 bool isSubsequence(string s, string t) {
     bool ans = false;
-    int n = s.length();
-    int m =t.length();
     int count =0;
     int j =0;
-    for(int i=0 ; i<n;i++)
+    for(int i=0 ; i<s.length();i++)
     {
-        while(j<=m)
+        while(j<=t.length())
         {
             if(t[j]==s[i]) {
                 j+=1;
@@ -20,7 +18,7 @@ bool isSubsequence(string s, string t) {
             }
             j++;
         }
-        if(j>m && count!=n) return false;
+        if(j>t.length() && count!=s.length()) return false;
     }
     
     return true;
