@@ -1,3 +1,4 @@
+//check if the given string is the substring of another given string or not
 #include<iostream>
 using namespace std;
 #include<string>
