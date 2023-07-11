@@ -3,7 +3,20 @@
 #include<bits/stdc++.h>
 using namespace std;
 vector<string> ans;
-void print(vector<string> ans)
+void getstairs2(int n, string res) //without storing any value and directly printing it
+{
+    if(n==0)
+    {
+        cout << res << endl;
+        return ;
+    }
+    else if(n<0) return ;
+    getstairs2(n-1,res+'1');
+    getstairs2(n-2,res+'2');
+    getstairs2(n-3,res+'3');
+    return ;
+}
+/*void print(vector<string> ans)
 {
     for(int i=0; i<ans.size();i++) cout<<ans[i] <<endl;
 }
@@ -40,11 +53,14 @@ vector<string> getstairs(int n)
         res.push_back(p3[i]);
     }
     return res;
-}
+}*/
 
 int main(){
-    int n=4;
-    vector<string> ans =getstairs(n);
-    print(ans);
+    int n=3;
+    string res = "";
+    getstairs2(n,res);
+    
+    // vector<string> ans = getstairs(n);
+    // print(ans);
     return 0;
 }

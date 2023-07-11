@@ -1,7 +1,25 @@
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
-void print(vector<string> &ans)
+void getmazeseq2(int srow,int scol, int erow, int ecol, string res) //without storing any value and directly printing it 
+{
+    if(srow==erow && scol==ecol) 
+    {
+        cout << res <<endl;
+        return ;
+    }
+    if(scol<ecol) 
+    {
+        getmazeseq2(srow, scol+1,erow,ecol, res+'h');
+    }
+    if(srow<erow) 
+    {
+        getmazeseq2(srow+1,scol,erow,ecol,res+'v');
+    }
+
+    return ;
+}
+/*void print(vector<string> &ans)
 {
     for(int i=0; i<ans.size();i++) cout<<ans[i] <<endl;
 }
@@ -38,11 +56,14 @@ vector<string> getmazeseq(int srow,int scol, int erow, int ecol)
     }
     
     return res;
-}
+}*/
+
 int main(){
     int row =3, col = 3;
-    vector<string> ans ;
-    ans =getmazeseq(0,0, row-1,col-1);
-    print(ans);
+    string res = "";
+    // vector<string> ans ;
+    // ans =getmazeseq(0,0, row-1,col-1);
+    // print(ans)
+    getmazeseq2(0,0,row-1, col-1,res);
     return 0;
 }
