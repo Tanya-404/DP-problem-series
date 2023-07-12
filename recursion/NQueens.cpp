@@ -60,7 +60,8 @@ int main(){
     vector<int> res;
     vector<vector<int>> board(n,vector<int> (n));
     sol(board,0,n,res);
-    print(ans);
+    if(ans.size()==0) cout << -1;
+    else print(ans);
     
     return 0;
 }
