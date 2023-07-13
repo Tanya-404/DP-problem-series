@@ -1,55 +1,36 @@
+/*Given an integer array nums that may contain duplicates, return all possible 
+subsets(the power set).
+The solution set must not contain duplicate subsets. Return the solution in any order.*/
+
+#include<iostream>
+#include<bits/stdc++.h>
+#include<string>
+using namespace std;
 void print(vector<vector<int>> res)
+{
+    for(int i=0;i<res.size();i++)
     {
-        for(int i=0;i<res.size();i++)
-        {
-            for(int j=0;j<res[i].size();j++) cout<< res[i][j] <<" ";
-            cout << endl;
-        }
+        for(int j=0;j<res[i].size();j++) cout<< res[i][j] <<" ";
+        cout << endl;
     }
-    bool isSafe(vector<vector<int>> board,int row, int col)
-    {
-        for(int i=row-1, j=col; i>=0 ;i--)
-        {
-            if(board[i][j]==1) return false;
-        }
-        for(int i=row-1, j=col-1; i>=0 && j>=0 ;i--,j--)
-        {
-            if(board[i][j]==1) return false;
-        }
-        for(int i=row-1, j=col+1; i>=0 && j<board.size() ;i--,j++)
-        {
-            if(board[i][j]==1) return false;
-        }
-        return true;
-        
+}
+void subset(int index,vector<int>&nums,vector<int>&ds,vector<vector<int>>&ans){
+    ans.push_back(ds);
+    for(int i=index;i<nums.size();i++){
+        if(i!=index && nums[i]==nums[i-1]) continue;
+        ds.push_back(nums[i]);
+        subset(i+1,nums,ds,ans);
+        ds.pop_back();
     }
-    void sol(vector<vector<int>> board,int row,int n,vector<int> res)
-    {
-        if(row==n) 
-        {
-            ans.push_back(res);
-            return;
-        }
-        for(int col=0; col<n; col++)
-        {
-            
-            if(isSafe(board, row,col))
-            {
-                res.push_back(row+1);
-                board[row][col] =1;
-                sol(board, row+1,n,res);
-                board[row][col] =0;
-                res.pop_back();
-            }
-        }
-        
-    }
-    vector<vector<int>> nQueen(int n) {
-        vector<int> res;
-        vector<vector<int>> board(n,vector<int> (n));
-        sol(board,0,n,res);
-        // print(ans);
-        return ans;
-        
-        // code here
-    }
+}
+
+int main(){
+    vector<int> nums ={1,2,2};
+    vector<vector<int>> ans;
+    vector<int> res;
+    sort(nums.begin(),nums.end());
+    subset(0,nums,res,ans);
+    print(ans);
+    
+    return 0;
+}
