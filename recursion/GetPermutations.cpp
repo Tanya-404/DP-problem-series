@@ -10,7 +10,6 @@ void Permutation(string input,string output)
         cout << output << endl;
         return ;
     }
-    vector<string> ans;
     for(int i=0;i < input.length();i++)
     {
         char ch = input.at(i);
