@@ -90,13 +90,15 @@ int main(){
     Node* head = NULL;
     InsertAfter(head,5,3);
     print(head);
-    //  InsertAfter(head,3,5);
-    // print(head);
-    //  InsertAfter(head,5,7);
-    // print(head);
-    // InsertAfter(head,7,9);
-    // print(head);
-    DeleteNode(head,3);
+    InsertAfter(head,3,5);
+    print(head);
+    InsertAfter(head,5,7);
+    print(head);
+    InsertAfter(head,7,9); 
+    print(head); 
+    InsertAfter(head,7,8); 
+    print(head);
+    DeleteNode(head,5);
     print(head);
     
     return 0;

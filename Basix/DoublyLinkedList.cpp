@@ -118,7 +118,7 @@ int main(){
     Node* n1 = new Node(10);
     Node* head =n1;
     print(head);
-    cout<< getLength(head) <<endl;
+    // cout<< getLength(head) <<endl;
     InsertAtBeginning(head,11);
     print(head);
     InsertAtEnd(head,13);
